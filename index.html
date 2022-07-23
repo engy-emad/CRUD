@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CRDUR</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>CRUD</h2>
+
+            <P>Product Managent System</P>
+
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small id="total">1234</small>
+            </div>
+
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+
+            <div class="search_block">
+                <input type="text" placeholder="search" id="search" onkeyup="searchDate(this.value)">
+                <div class="btns_search">
+                    <button onclick="getSearchMood(this.id)" id="search_title">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="search_category">Search By category</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="delateAll"></div>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th> Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Update</th>
+                <th>Delate</th>
+            </tr>
+
+            <tbody id="tbody">
+
+
+
+
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
